@@ -78,7 +78,7 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 logger = setup_logging()
 
 class MaskGenerator:
-    def __init__(self, checkpoint_path="sam_vit_h_4b8939.pth"):
+    def __init__(self, checkpoint_path="checkpoints/sam_vit_h_4b8939.pth"):
         """
         Initialize SAM model for mask generation
         
