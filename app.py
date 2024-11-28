@@ -78,7 +78,7 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 logger = setup_logging()
 
 class MaskGenerator:
-    def __init__(self, checkpoint_path="checkpoints/sam_vit_h_4b8939.pth"):
+    def __init__(self, checkpoint_path="checkpoints/sam_vit_l_0b3195.pth"):
         """
         Initialize SAM model for mask generation
         
@@ -96,7 +96,7 @@ class MaskGenerator:
         """
         logger.info("Initializing SAM model")
         try:
-            model_type = "vit_h"
+            model_type = "vit_l"
             sam = sam_model_registry[model_type](checkpoint=self.checkpoint_path)
             sam.to(device=self.device)
             logger.info(f"SAM model loaded successfully on {self.device}")
