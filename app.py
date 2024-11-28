@@ -107,7 +107,7 @@ class MaskGenerator:
 
     @log_performance
     def generate_masks(self, image_path, 
-                       points_per_side=8, 
+                       points_per_side=12, 
                        pred_iou_thresh=0.86, 
                        stability_score_thresh=0.92):
         """
